@@ -1,5 +1,5 @@
 
-import toast from "react-hot-toast";
+
 import {
   deleteLead,
   getLeads,
@@ -36,7 +36,7 @@ const handleAddLead = async (formData) => {
 
   await createLead(formData);
 
-  toast.success("Lead Added");
+
 
   fetchLeads();
 
@@ -44,13 +44,13 @@ const handleAddLead = async (formData) => {
 
   const handleDelete = async (id) => {
     await deleteLead(id);
-    toast.success("Lead Deleted");
+   
     fetchLeads();
   };
 
   const handleStatus = async (id, status) => {
     await updateLead(id, { status });
-    toast.success("Status Updated");
+  
     fetchLeads();
   };
 
