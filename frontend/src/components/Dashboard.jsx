@@ -15,13 +15,17 @@ function Dashboard({
 }) {
   const [leads, setLeads] = useState([]);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const fetchLeads = async () => {
+    setLoading(true);
     try {
       const response = await getLeads();
       setLeads(response.data || []);
     } catch (error) {
       console.error("Failed to load leads:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -145,73 +149,54 @@ function Dashboard({
 
           </thead >
           <tbody>
-
-            {filteredLeads.map((lead) => (
-
-              <tr key={lead._id}>
-
-                <td>{lead.name}</td>
-
-                <td>{lead.email}</td>
-
-                <td>{lead.source}</td>
-                <td>
-
-  <div className="status-container">
-
-    <span
-      className={`status-badge ${lead.status}`}
-    >
-      {lead.status}
-    </span>
-
-    <select
-      className="status-select"
-      value={lead.status}
-      onChange={(e) =>
-        handleStatus(
-          lead._id,
-          e.target.value
-        )
-      }
-    >
-
-      <option>New</option>
-
-      <option>
-        Contacted
-      </option>
-
-      <option>
-        Converted
-      </option>
-
-    </select>
-
-  </div>
-
-</td>
-               
-
-                <td>{lead.notes}</td>
-
-                <td>
-
-                  <button
-                    className="delete-btn"
-                    onClick={() =>
-                      handleDelete(lead._id)
-                    }
-                  >
-                    Delete
-                  </button>
-
+            {loading ? (
+              <tr>
+                <td colSpan="6" className="empty-row">
+                  Loading leads...
                 </td>
-
               </tr>
-
-            ))}
-
+            ) : filteredLeads.length > 0 ? (
+              filteredLeads.map((lead) => (
+                <tr key={lead._id}>
+                  <td>{lead.name}</td>
+                  <td>{lead.email}</td>
+                  <td>{lead.source}</td>
+                  <td>
+                    <div className="status-container">
+                      <span className={`status-badge ${lead.status}`}>
+                        {lead.status}
+                      </span>
+                      <select
+                        className="status-select"
+                        value={lead.status}
+                        onChange={(e) =>
+                          handleStatus(lead._id, e.target.value)
+                        }
+                      >
+                        <option>New</option>
+                        <option>Contacted</option>
+                        <option>Converted</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>{lead.notes}</td>
+                  <td>
+                    <button
+                      className="delete-btn"
+                      onClick={() => handleDelete(lead._id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="6" className="empty-row">
+                  No leads found. Add a new lead to get started.
+                </td>
+              </tr>
+            )}
           </tbody>
 
         </table>
