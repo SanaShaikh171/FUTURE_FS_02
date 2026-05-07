@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api/leads",
+  baseURL: "https://future-fs-02-twwf.onrender.com",
 });
 
 export const getLeads = () => API.get("/");
