@@ -412,3 +412,192 @@ tr:hover {
   }
 
 }
+.login-page {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+}
+
+
+/* LEFT SIDE */
+
+.login-left {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 60px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f172a,
+      #2563eb
+    );
+
+  color: white;
+}
+
+.login-left h1 {
+  font-size: 4rem;
+
+  margin-bottom: 20px;
+}
+
+.login-left p {
+  font-size: 1.1rem;
+
+  line-height: 1.7;
+
+  max-width: 500px;
+
+  margin-bottom: 40px;
+}
+
+.login-features {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.feature-card {
+  background: rgba(255,255,255,0.1);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  width: fit-content;
+
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateX(8px);
+}
+
+
+/* RIGHT SIDE */
+
+.login-right {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #111827,
+      #1e293b
+    );
+}
+
+.login-form {
+  width: 380px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  padding: 40px;
+
+  border-radius: 28px;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.3);
+}
+
+.login-form h2 {
+  font-size: 2rem;
+
+  text-align: center;
+}
+
+.login-subtitle {
+  text-align: center;
+
+  opacity: 0.7;
+
+  margin-bottom: 10px;
+}
+
+.login-form input {
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.08);
+
+  color: white;
+}
+
+.login-form input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.login-form button {
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #38bdf8,
+      #2563eb
+    );
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.95;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-left {
+    display: none;
+  }
+
+}

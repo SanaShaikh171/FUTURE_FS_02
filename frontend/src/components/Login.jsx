@@ -16,40 +16,86 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div className="login-container">
 
-      <form
-        className="login-form"
-        onSubmit={handleSubmit}
-      >
+    <div className="login-page">
 
-        <h2>Admin Login</h2>
+      {/* LEFT SIDE */}
 
-        <input
-          type="email"
-          placeholder="Admin Email"
-          value={email}
-          onChange={(e) =>
-            setEmail(e.target.value)
-          }
-        />
+      <div className="login-left">
 
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) =>
-            setPassword(e.target.value)
-          }
-        />
+        <h1>
+          Mini CRM
+        </h1>
 
-        <button type="submit">
-          Login
-        </button>
+        <p>
+          Manage leads, track conversions,
+          and organize client relationships
+          with a modern CRM dashboard.
+        </p>
 
-      </form>
+        <div className="login-features">
+
+          <div className="feature-card">
+            📊 Analytics Dashboard
+          </div>
+
+          <div className="feature-card">
+            👥 Lead Management
+          </div>
+
+          <div className="feature-card">
+            🚀 Conversion Tracking
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT SIDE */}
+
+      <div className="login-right">
+
+        <form
+          className="login-form"
+          onSubmit={handleSubmit}
+        >
+
+          <h2>
+            Admin Login
+          </h2>
+
+          <p className="login-subtitle">
+            Access your CRM dashboard
+          </p>
+
+          <input
+            type="email"
+            placeholder="Admin Email"
+            value={email}
+            onChange={(e) =>
+              setEmail(e.target.value)
+            }
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) =>
+              setPassword(e.target.value)
+            }
+          />
+
+          <button type="submit">
+            Login
+          </button>
+
+        </form>
+
+      </div>
 
     </div>
+
   );
 }
 
