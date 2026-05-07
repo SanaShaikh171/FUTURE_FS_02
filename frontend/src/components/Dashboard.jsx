@@ -13,44 +13,42 @@ function Dashboard({
   theme,
   setTheme,
 }) {
+  const [leads, setLeads] = useState([]);
+  const [search, setSearch] = useState("");
+
+  const fetchLeads = async () => {
+    try {
+      const response = await getLeads();
+      setLeads(response.data || []);
+    } catch (error) {
+      console.error("Failed to load leads:", error);
+    }
+  };
 
   useEffect(() => {
-
     fetchLeads();
-
   }, []);
 
   const handleAddLead = async (formData) => {
-
     await createLead(formData);
-
     fetchLeads();
-
   };
 
   const handleDelete = async (id) => {
-
     await deleteLead(id);
-
     fetchLeads();
-
   };
 
   const handleStatus = async (id, status) => {
-
     await updateLead(id, { status });
-
     fetchLeads();
-
   };
 
   const stats = {
     total: leads.length,
-
     contacted: leads.filter(
       (lead) => lead.status === "Contacted"
     ).length,
-
     converted: leads.filter(
       (lead) => lead.status === "Converted"
     ).length,
