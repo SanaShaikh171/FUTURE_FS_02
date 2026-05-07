@@ -9,18 +9,10 @@ import { useEffect, useState } from "react";
 
 import LeadForm from "./LeadForm";
 
-function Dashboard() {
-
-  const [leads, setLeads] = useState([]);
-  const [search, setSearch] = useState("");
-
-  const fetchLeads = async () => {
-
-    const { data } = await getLeads();
-
-    setLeads(data);
-
-  };
+function Dashboard({
+  theme,
+  setTheme,
+}) {
 
   useEffect(() => {
 
@@ -73,6 +65,20 @@ function Dashboard() {
        <div className="navbar">
 
   <h2>Mini CRM</h2>
+  <button
+  className="theme-btn"
+  onClick={() =>
+    setTheme(
+      theme === "dark"
+        ? "light"
+        : "dark"
+    )
+  }
+>
+  {theme === "dark"
+    ? "☀ Light"
+    : "🌙 Dark"}
+</button>
 
   <button
     className="logout-btn"
@@ -151,32 +157,43 @@ function Dashboard() {
                 <td>{lead.email}</td>
 
                 <td>{lead.source}</td>
-
                 <td>
 
-                  <select
-                    value={lead.status}
-                    onChange={(e) =>
-                      handleStatus(
-                        lead._id,
-                        e.target.value
-                      )
-                    }
-                  >
+  <div className="status-container">
 
-                    <option>New</option>
+    <span
+      className={`status-badge ${lead.status}`}
+    >
+      {lead.status}
+    </span>
 
-                    <option>
-                      Contacted
-                    </option>
+    <select
+      className="status-select"
+      value={lead.status}
+      onChange={(e) =>
+        handleStatus(
+          lead._id,
+          e.target.value
+        )
+      }
+    >
 
-                    <option>
-                      Converted
-                    </option>
+      <option>New</option>
 
-                  </select>
+      <option>
+        Contacted
+      </option>
 
-                </td>
+      <option>
+        Converted
+      </option>
+
+    </select>
+
+  </div>
+
+</td>
+               
 
                 <td>{lead.notes}</td>
 
