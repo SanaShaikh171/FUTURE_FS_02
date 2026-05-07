@@ -18,9 +18,9 @@ The application supports:
 
 ## 🚀 Live Demo
 
-Frontend: YOUR_VERCEL_LINK
+Frontend: https://future-fs-02-gamma-mocha.vercel.app/
 
-Backend API: YOUR_RENDER_LINK
+Backend API: https://future-fs-02-twwf.onrender.com
 
 ---
 
