@@ -1,24 +1,12 @@
 import "./App.css";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Dashboard from "./components/Dashboard";
 
 import Login from "./components/Login";
 
 function App() {
-
-  const [theme, setTheme] = useState(
-  localStorage.getItem("theme") || "dark"
-);
-useEffect(() => {
-
-  document.body.className = theme;
-
-  localStorage.setItem("theme", theme);
-
-}, [theme]);
-
   const [isLoggedIn, setIsLoggedIn] =
     useState(
       localStorage.getItem("admin") ===
@@ -54,10 +42,7 @@ useEffect(() => {
     <div>
 
       {isLoggedIn ? (
-       <Dashboard
-  theme={theme}
-  setTheme={setTheme}
-   />
+        <Dashboard />
       ) : (
         <Login onLogin={handleLogin} />
       )}

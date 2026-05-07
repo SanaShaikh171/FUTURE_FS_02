@@ -11,10 +11,7 @@ import { useEffect, useState } from "react";
 
 import LeadForm from "./LeadForm";
 
-function Dashboard({
-  theme,
-  setTheme,
-}) {
+function Dashboard() {
   const [leads, setLeads] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
@@ -73,35 +70,18 @@ const handleAddLead = async (formData) => {
 
   return (
     <div className="dashboard">
-       <div className="navbar">
-
-  <h2>Mini CRM</h2>
-  <button
-  className="theme-btn"
-  onClick={() =>
-    setTheme(
-      theme === "dark"
-        ? "light"
-        : "dark"
-    )
-  }
->
-  {theme === "dark"
-    ? "☀ Light"
-    : "🌙 Dark"}
-</button>
-
-  <button
-    className="logout-btn"
-    onClick={() => {
-      localStorage.removeItem("admin");
-      window.location.reload();
-    }}
-  >
-    Logout
-  </button>
-
-</div>
+      <div className="navbar">
+        <h2>Mini CRM</h2>
+        <button
+          className="logout-btn"
+          onClick={() => {
+            localStorage.removeItem("admin");
+            window.location.reload();
+          }}
+        >
+          Logout
+        </button>
+      </div>
       <h1 className="title">
         Mini CRM Dashboard
       </h1>
