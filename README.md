@@ -1,68 +1,57 @@
 # Mini CRM Dashboard
 
-## 📌 Project Overview
+A full-stack web application for managing client leads through a simple CRM dashboard.
 
-Mini CRM Dashboard is a full-stack lead management system that allows businesses to manage incoming client leads efficiently.
+## Overview
 
-The application supports:
+The application allows users to:
 
-* Lead creation
-* Status tracking
-* Follow-up notes
-* Analytics dashboard
-* Admin authentication
-* Search functionality
-* Dark/Light mode UI
+* Create and manage leads
+* Update lead status
+* Add follow-up notes
+* Search leads
+* View basic dashboard analytics
+* Use dark and light themes
 
----
+## Live Demo
 
-## 🚀 Live Demo
+**Frontend:** https://future-fs-02-gamma-mocha.vercel.app/
 
-Frontend: https://future-fs-02-gamma-mocha.vercel.app/
+**Backend API:** https://future-fs-02-twwf.onrender.com
 
-Backend API: https://future-fs-02-twwf.onrender.com
+## Tech Stack
 
----
-
-## 🛠 Tech Stack
-
-### Frontend
+**Frontend**
 
 * React.js
 * CSS3
 * Axios
 
-### Backend
+**Backend**
 
 * Node.js
 * Express.js
 
-### Database
+**Database**
 
 * MongoDB Atlas
 
-### Deployment
+**Deployment**
 
 * Vercel
 * Render
 
----
+## Features
 
-## ✨ Features
+* Admin login
+* Create, read, update and delete leads
+* Lead status management
+* Search functionality
+* Responsive dashboard
+* Dark/light mode
+* Basic analytics cards
 
-* Admin Login Authentication
-* Create, Read, Update, Delete Leads
-* Lead Status Management
-* Search Functionality
-* Responsive Dashboard
-* Glassmorphism UI
-* Dark & Light Theme Toggle
-* Analytics Cards
-* MongoDB Cloud Database
-
----
-
-## ⚙️ Setup Instructions
+## Running Locally
 
 ### Frontend
 
@@ -80,34 +69,15 @@ npm install
 node server.js
 ```
 
----
+## What I Learned
 
-## 🌐 Deployment
+* Building a frontend with React.js
+* Connecting a frontend to backend APIs
+* Working with Node.js and Express.js
+* Using MongoDB Atlas for data storage
+* Deploying frontend and backend applications
+* Using Git and GitHub during development
 
-### Frontend Deployment
-
-Deployed using Vercel.
-
-### Backend Deployment
-
-Deployed using Render.
-
-### Database
-
-MongoDB Atlas cloud database used for persistent storage.
-
----
-
-## 👨‍💻 Admin Credentials
-
-Email:
-[admin@gmail.com](mailto:admin@gmail.com)
-
-Password:
-admin123
-
----
-
-## 📌 Author
+## Author
 
 Sana Shaikh
