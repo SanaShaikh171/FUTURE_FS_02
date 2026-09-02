@@ -6,10 +6,8 @@ A full-stack CRM dashboard for managing client leads — track status, add follo
 
 ### Demo Access
 
-The live deployment includes a demo login to explore the CRM dashboard.
-
-**Email:** `admin@gmail.com`  
-**Password:** `admin123`
+**Email:** `demo@example.com`  
+**Password:** `demo1234`
 
 ## Features
 
