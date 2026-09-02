@@ -65,7 +65,7 @@ function Login({ onLogin }) {
           </h2>
 
           <p className="demo-credentials">
-         Demo credentials: <strong>admin@gmail.com</strong> / <strong>admin123</strong>
+         Demo credentials: <strong>demo@example.com </strong> / <strong>demo1234</strong>
       </p>
 
           <input
