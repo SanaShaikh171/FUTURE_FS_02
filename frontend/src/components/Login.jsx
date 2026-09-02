@@ -60,13 +60,13 @@ function Login({ onLogin }) {
           onSubmit={handleSubmit}
         >
 
-          <h2>
-            Admin Login
+         <h2>
+            Demo Login
           </h2>
 
-          <p className="login-subtitle">
-            Access your CRM dashboard
-          </p>
+<p className="login-subtitle">
+  Use the demo credentials to explore the CRM dashboard
+</p>
 
           <input
             type="email"
