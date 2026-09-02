@@ -2,8 +2,7 @@
 
 A full-stack CRM dashboard for managing client leads — track status, add follow-up notes, and view key stats from a clean, responsive interface.
 
-**Live Demo:** [Frontend](https://future-fs-02-gamma-mocha.vercel.app/) ·
-[Backend API](https://future-fs-02-twwf.onrender.com)
+**Live Demo:** [Frontend](https://future-fs-02-gamma-mocha.vercel.app/) · [Backend API](https://future-fs-02-twwf.onrender.com)
 
 ## Features
 
@@ -16,18 +15,21 @@ A full-stack CRM dashboard for managing client leads — track status, add follo
 ## Tech Stack
 
 **Frontend:** React, Vite, Axios, CSS
+
 **Backend:** Node.js, Express.js, Mongoose
+
 **Database:** MongoDB Atlas
+
 **Deployment:** Vercel (frontend), Render (backend)
 
 ## API Reference
 
-| Method | Endpoint          | Description        |
-|--------|-------------------|---------------------|
-| GET    | `/api/leads`      | Get all leads       |
-| POST   | `/api/leads`      | Create a lead        |
-| PUT    | `/api/leads/:id`  | Update a lead        |
-| DELETE | `/api/leads/:id`  | Delete a lead        |
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/leads` | Get all leads |
+| POST | `/api/leads` | Create a lead |
+| PUT | `/api/leads/:id` | Update a lead |
+| DELETE | `/api/leads/:id` | Delete a lead |
 
 ## Getting Started
 
