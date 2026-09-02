@@ -64,9 +64,9 @@ function Login({ onLogin }) {
             Demo Login
           </h2>
 
-<p className="login-subtitle">
-  Use the demo credentials to explore the CRM dashboard
-</p>
+          <p className="demo-credentials">
+         Demo credentials: <strong>admin@gmail.com</strong> / <strong>admin123</strong>
+      </p>
 
           <input
             type="email"
