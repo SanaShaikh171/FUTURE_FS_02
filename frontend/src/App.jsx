@@ -19,8 +19,8 @@ function App() {
   ) => {
 
     if (
-      email === "admin@gmail.com" &&
-      password === "admin123"
+      email === "demo@example.com" &&
+      password === "demo1234"
     ) {
 
       localStorage.setItem(
